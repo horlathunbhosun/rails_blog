@@ -1,4 +1,7 @@
 class ArticlesController < ApplicationController
+		before_action :set_articles, only: [:show , :edit , :update , :destroy]
+
+
 	def index
 		@articles = Article.all
 	end
@@ -7,7 +10,6 @@ class ArticlesController < ApplicationController
 		@article = Article.new
 	end
 	def show
-		@article = Article.find(params[:id])
 	end
 
 	def create
@@ -22,11 +24,9 @@ class ArticlesController < ApplicationController
 	end
 
 	def edit
-		@article = Article.find(params[:id])
 	end
 
 	def update
-		@article = Article.find(params[:id])
 		if @article.update(article_params)
 			flash[:notice] = "Your article as been updated successfully"
 			redirect_to article_path(@article)
@@ -36,7 +36,6 @@ class ArticlesController < ApplicationController
 	end
 
 	def destroy
-		@article = Article.find(params[:id])
 		@article.destroy
 		flash[:notice] = "Your article as been deleted successfully"
 		redirect_to articles_path
@@ -44,6 +43,13 @@ class ArticlesController < ApplicationController
 	end
 
 private 
+    # Use callbacks to share common setup or constraints between actions.
+def set_articles
+  @article = Article.find(params[:id])
+
+end
+	    # Never trust parameters from the scary internet, only allow the white list through.
+
 def article_params
 
 	params.require(:article).permit(:title, :description)
