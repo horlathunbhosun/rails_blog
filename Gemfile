@@ -35,7 +35,7 @@ gem "jquery-rails"
 gem 'popper_js', '~> 1.12.9'
 gem 'mail_form'
 gem 'will_paginate'
-gem "paperclip", "~> 6.0.0"
+gem "paperclip", "~> 6.0.0" 
 
 
 
