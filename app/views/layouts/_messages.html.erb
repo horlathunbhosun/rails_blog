@@ -3,7 +3,7 @@
     <% flash.each do|name, msg| %>
       <div class='alert alert-<%= "#{name}" %>'>
         <a href="#" class="close" data-dismis="alert">&#215;</a>
-        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+
 
         <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
 

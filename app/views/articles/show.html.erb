@@ -21,6 +21,8 @@
     <hr>
 
     <img src="" alt="">
+    <%= image_tag @article.image.url, width:'500px', height:'200px', :class => 'img-responsive' %>
+
     <hr>
     <p><%= simple_format(@article.description) %></p>
   </div>

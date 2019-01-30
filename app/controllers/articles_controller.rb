@@ -42,7 +42,7 @@ class ArticlesController < ApplicationController
 		
 	end
 
-private 
+ private
     # Use callbacks to share common setup or constraints between actions.
 def set_articles
   @article = Article.find(params[:id])
@@ -52,6 +52,6 @@ end
 
 def article_params
 
-	params.require(:article).permit(:title, :description)
+	params.require(:article).permit(:title, :description, :image)
 end
 end
