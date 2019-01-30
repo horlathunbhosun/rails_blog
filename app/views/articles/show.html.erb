@@ -6,12 +6,6 @@
 	Description: <%= @article.description %>
 </p>
 
-<p>
-	<%= link_to "Edit", edit_article_path(@article)%>
+<%= link_to "Edit this article", edit_article_path(@article)%> | <%= link_to "View ALl Articles", articles_path %>
 
-</p>
-
-<p>
-	<%= link_to "List Article", articles_path %>
-</p>
 
