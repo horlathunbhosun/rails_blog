@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
- gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap-sass' 
 
 
@@ -38,8 +38,8 @@ gem "jquery-rails"
 gem 'popper_js', '~> 1.12.9'
 gem 'mail_form'
 gem 'will_paginate'
-gem "paperclip", "~> 6.0.0" 
-
+gem "paperclip", "~> 6.0.0"
+gem 'glyphicons-rails', '~> 0.1.2'
 
 
 
