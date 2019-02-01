@@ -1,8 +1,14 @@
 $navbar-default-bg: #4e4943;
 
 @import "bootstrap";
+@import "bootstrap-wysihtml5/bootstrap3-wysihtml5";
+//@import "font-awesome"
 
-
+.static-img{
+  border: 2px solid black;
+  min-height: 5%;
+  max-height: 10%;
+}
 #logo{
 	float: left;
 	font-size: 1.7em;

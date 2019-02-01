@@ -20,12 +20,9 @@ class ArticlesController < ApplicationController
 		else
 			render 'new'
 		end
-		
 	end
-
 	def edit
 	end
-
 	def update
 		if @article.update(article_params)
 			flash[:success] = "Your article as been updated successfully"
@@ -34,7 +31,6 @@ class ArticlesController < ApplicationController
 			render 'edit'
 		end
 	end
-
 	def destroy
 		@article.destroy
 		flash[:danger] = "Your article as been deleted successfully"

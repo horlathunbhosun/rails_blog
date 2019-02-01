@@ -42,6 +42,8 @@ gem 'popper_js', '~> 1.12.9'
 gem 'will_paginate'
 gem 'bootstrap-glyphicons'
 
+gem 'bootstrap-wysihtml5-rails', '~> 0.3.3.8'
+
 
 
 gem "wysiwyg-rails"
