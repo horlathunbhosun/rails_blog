@@ -4,12 +4,12 @@
       <div class="panel panel-danger">
         <div class="panel-heading">
           <h2 class="panel-title">
-            <%= pluralize(@article.errors.count, 'errors') %>
+            <%= pluralize(obj.errors.count, 'errors') %>
             prohibited this article from being saved:
           </h2>
           <!-- show errors -->
           <div class="panel-body">
-            <% @article.errors.full_messages.each do |msg|%>
+            <% obj.errors.full_messages.each do |msg|%>
               <div class="alert alert-danger"><%= msg %></div>
             <% end %>
           </div>
