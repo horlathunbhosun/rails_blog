@@ -14,6 +14,12 @@
     <p class="lead">
       by
       <a href="#">someone</a>
+      <small>
+        Created by: <%= @article.user.username if @article.user %>
+        <span class="fa fa-clock-o"></span> <%= time_ago_in_words(@article.created_at) %> ago ,
+        Last updated: <%= time_ago_in_words(@article.updated_at) %> ago
+
+      </small>
     </p>
     <hr>
 
