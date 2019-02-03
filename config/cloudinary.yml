@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: horlathunbhosun
+  api_key: '413554924659413'
+  api_secret: TJGLPPuKy-Wx4fCiXQ1whxpLfMM
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: horlathunbhosun
+  api_key: '413554924659413'
+  api_secret: TJGLPPuKy-Wx4fCiXQ1whxpLfMM
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: horlathunbhosun
+  api_key: '413554924659413'
+  api_secret: TJGLPPuKy-Wx4fCiXQ1whxpLfMM
+  enhance_image_tag: true
+  static_file_support: false
