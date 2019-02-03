@@ -1,0 +1,16 @@
+<h1 align="center">All Asf Bloggers</h1>
+<div class="row">
+  <% @user.each do |user|%>
+    <div class="col-md-3">
+      <div class="thumbnail">
+              <div class="">
+                <%= link_to gravatar_for(user), user_path(user) %>
+              </div>
+        <div class="caption">
+          <h3 class="article-title"><%= link_to user.firstname+ ' ' +user.lastname , user_path(user) %></h3>
+          <small><%= pluralize(user.articles.count, "article") if user.articles %> </small>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
