@@ -14,3 +14,11 @@
     </div>
   <% end %>
 </div>
+
+<div align="center">
+  <div class="digg_pagination ">
+    <div class="page_info">
+      <%= page_entries_info @user %>
+    </div>
+    <div style="padding-left: 450px;" ><%= will_paginate @user, :container => false %></div>
+  </div>

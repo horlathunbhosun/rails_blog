@@ -41,6 +41,7 @@ gem 'mail_form'
 gem 'paperclip', '~> 6.0.0'
 gem 'popper_js', '~> 1.12.9'
 gem 'will_paginate'
+gem 'bootstrap-will_paginate', '~> 1.0'
 gem 'bootstrap-glyphicons'
 
 gem 'bootstrap-wysihtml5-rails', '~> 0.3.3.8'

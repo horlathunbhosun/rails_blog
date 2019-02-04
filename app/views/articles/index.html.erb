@@ -2,3 +2,12 @@
 <p><%= link_to "Add New Article", new_article_path %> </p>
 
 <%= render 'article', obj: @articles %>
+
+<div align="center">
+<div class="digg_pagination ">
+  <div class="page_info">
+    <%= page_entries_info @articles %>
+  </div>
+  <div style="padding-left: 450px;" ><%= will_paginate @articles, :container => false %></div>
+</div>
+</div>

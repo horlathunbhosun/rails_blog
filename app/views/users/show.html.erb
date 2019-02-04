@@ -6,4 +6,11 @@
 </div>
 <h4 align="center"><%= @user.username %>'s articles</h4>
 
-<%= render 'articles/article', obj: @user.articles %>
+<%= render 'articles/article', obj: @user_articles %>
+<div align="center">
+  <div class="digg_pagination ">
+    <div class="page_info">
+      <%= page_entries_info @user_articles %>
+    </div>
+    <div style="padding-left: 450px;" ><%= will_paginate @user_articles, :container => false %></div>
+  </div>
