@@ -1,15 +1,14 @@
-
-
 <div class="row">
   <div class="col-sm-8">
    <h1><%= @article.title %></h1>
     <p class="lead">
       by
-      <a href="#">someone</a>
+      <%= @article.user.username if @article.user %>
+
       <small>
-        Created by: <%= @article.user.username if @article.user %>
-        <span class="fa fa-clock-o"></span> <%= time_ago_in_words(@article.created_at) %> ago ,
-        Last updated: <%= time_ago_in_words(@article.updated_at) %> ago
+<!--        Created by: <%#= @article.user.username if @article.user %>-->
+       <small><span class="fa fa-clock-o"></span> <%= time_ago_in_words(@article.created_at) %> ago </small>
+        <small>Last updated: <%= time_ago_in_words(@article.updated_at) %> ago</small>
 
       </small>
     </p>
