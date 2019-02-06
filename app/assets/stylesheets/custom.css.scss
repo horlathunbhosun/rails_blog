@@ -1,9 +1,12 @@
-$navbar-default-bg: #4e4943;
+$navbar-default-bg:  #000000;
 
 @import "bootstrap";
 @import "bootstrap-wysihtml5/bootstrap3-wysihtml5";
 //@import "font-awesome"
 
+.color-me{
+  color:#ffffff;
+}
 .static-img{
   border: 2px solid black;
   min-height: 5%;
@@ -16,6 +19,10 @@ $navbar-default-bg: #4e4943;
 	text-transform: uppercase;
 	letter-spacing: -1px;
 	font-weight: bold;
+}
+
+#nav{
+  color: #fff;
 }
 
 #logo:hover{
@@ -46,7 +53,7 @@ $navbar-default-bg: #4e4943;
 }
 .btn-xlarge {
   font-size: 1.7em;
-  background-color: #4e4943;
+  background-color: #000000;
   border-color:#4e4943;
   color: #fff;
 }
