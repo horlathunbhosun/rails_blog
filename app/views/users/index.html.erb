@@ -8,7 +8,14 @@
               </div>
         <div class="caption">
           <h3 class="article-title"><%= link_to user.firstname+ ' ' +user.lastname , user_path(user) %></h3>
+          <div align="center">
           <small><%= pluralize(user.articles.count, "article") if user.articles %> </small>
+          <br>
+            <% if logged_in? and current_user.admin? %>
+         <small> <%= link_to "Delete this user", user_path(user), method: :delete,
+                       data:{confirm: "Are you sure you want to delete the user and all their articles?"}, class:"btn btn-xs btn-danger" %> </small>
+              <% end %>
+          </div>
         </div>
       </div>
     </div>
