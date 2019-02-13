@@ -8,6 +8,7 @@
           <h3 class="article-title"></h3>
           <div align="center">
            <h3> <%= link_to "#{category.name}", category_path(category) %> </h3>
+            <small><%= pluralize(category.articles.count, "article") %></small>
           </div>
         </div>
       </div>

@@ -6,6 +6,8 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.paginate(page: params[:page], per_page: 12)
+    # @categories = Category.all
+
   end
 
   def new
@@ -13,6 +15,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    # @category = Category.all
   end
 
   def create
@@ -57,7 +60,7 @@ class ArticlesController < ApplicationController
 
   def article_params
 
-    params.require(:article).permit(:title, :description)
+    params.require(:article).permit(:title, :description, category_ids: [])
   end
 
   def require_same_user

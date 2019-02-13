@@ -2,9 +2,6 @@
   <div class="col-sm-8">
    <h1><%= @article.title %></h1>
     <p class="lead">
-      by
-      <%= @article.user.username if @article.user %>
-
       <small>
 <!--        Created by: <%#= @article.user.username if @article.user %>-->
        <small><span class="fa fa-clock-o"></span> <%= time_ago_in_words(@article.created_at) %> ago </small>
@@ -14,13 +11,16 @@
     </p>
     <hr>
 
-    <p> Posted by this person </p>
+    <p> <%= @article.user.username if @article.user %> </p>
     <hr>
 
     <%#= image_tag @article.image.url, width:'500px', height:'200px', :class => 'img-responsive' %>
 
     <hr>
     <p><%= simple_format(@article.description) %></p>
+    <% if @article.categories.any? %>
+      <p>Categories: <%= render @article.categories %></p>
+    <% end %>
   </div>
 
     <div class="col-sm-4">
@@ -44,30 +44,14 @@
           <div class="row">
             <div class="col-lg-6">
               <ul class="list-unstyled mb-0">
-                <li>
-                  <a href="#">Web Design</a>
-                </li>
-                <li>
-                  <a href="#">HTML</a>
-                </li>
-                <li>
-                  <a href="#">Freebies</a>
-                </li>
+                <%# @categories.each do |category|  %>
+<!--                <li>-->
+                  <%#= link_to "#{category.name}", category_path(category) %>
+<!--                </li>-->
+                  <%# end %>
               </ul>
             </div>
-            <div class="col-lg-6">
-              <ul class="list-unstyled mb-0">
-                <li>
-                  <a href="#">JavaScript</a>
-                </li>
-                <li>
-                  <a href="#">CSS</a>
-                </li>
-                <li>
-                  <a href="#">Tutorials</a>
-                </li>
-              </ul>
-            </div>
+
           </div>
         </div>
       </div>

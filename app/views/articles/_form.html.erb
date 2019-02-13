@@ -17,12 +17,9 @@
 <!--         </div>-->
 <!--         <div class="col-sm-8">-->
            <%#= f.file_field :image,  class:'form-control', autofocus:true %>
-
            <%# if params[:controller] == 'articles' && params[:action] == 'edit' %>
              <%#= image_tag @article.image, width:'200px', height:'200px', :class => 'img-thumbnail' %>
-
          <%# elsif params[:controller] == 'articles' && params[:action] == 'new' %>
-
            <%# end %>
 <!--         </div>-->
 <!--       </div>-->
@@ -32,10 +29,18 @@
          </div>
          <div class="col-sm-8">
          <%= f.text_area :description, rows: 10 , id: 'article_body', class:'form-control wysihtml5', placeholder: 'Write the article description here', autofocus:true, require: 'required' %>
-
-
          </div>
        </div>
+       <div class="form-group">
+         <div class="row">
+           <div class="col-sm-offset-2 col-sm-8">
+             <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
+                <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %>
+             <% end %>
+           </div>
+         </div>
+       </div>
+
        <div class="form-group">
          <div class="col-sm-offset-2 col-sm-10">
              <%= f.submit  class: 'btn btn-primary btn-lg'%>
