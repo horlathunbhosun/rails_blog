@@ -33,7 +33,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'font-awesome-rails'
 gem 'paperclip-cloudinary'
 
-gem 'rails-controller-testing', '~> 0.0.3'
+gem 'rails-controller-testing'
 
 
 
